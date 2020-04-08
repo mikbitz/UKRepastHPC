@@ -46,10 +46,6 @@ public:
     
     static void setParameters(repast::Properties*);
 
-     //Dispersal constants
-    static double _DispersalSpeedBodyMassScalar       ;
-    static double _DispersalSpeedBodyMassExponent     ;
-    static double _VelocityUnitConversion             ;
     //Pi!
     static double _Pi ;
     //area units conversion

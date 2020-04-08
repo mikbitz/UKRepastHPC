@@ -22,14 +22,6 @@
 using namespace repast;
     //shared constants - these are defaults - Humans::setParameters will get these from model.props
     
-    //dispersal constants
-    double Human::_DispersalSpeedBodyMassScalar       = 0.0278;
-    double Human::_DispersalSpeedBodyMassExponent     = 0.48;
-
-    // Convert velocity from m/s to km/month. Assumes this is the correct scale factor for the velocity files!
-    double Human::_VelocityUnitConversion                      = 60 * 60 * 24 * 30  / 1000;
-  
-    
     //Pi!
     double Human::_Pi = acos(-1);
     //cell areas are in sq. km.
@@ -47,13 +39,6 @@ using namespace repast;
 void Human::setParameters(repast::Properties* props){
     //shared constants - static function to read these from parameter file
 
-    
-    //dispersal constants
-     _DispersalSpeedBodyMassScalar                = repast::strToDouble(props->getProperty("HumanParameters.DispersalSpeedBodyMassScalar"));
-     _DispersalSpeedBodyMassExponent              = repast::strToDouble(props->getProperty("HumanParameters.DispersalSpeedBodyMassExponent"));
-
-     // Convert velocity from m/s to km/month. 
-     _VelocityUnitConversion                      = 60 * 60 * 24 * 30 / 1000; 
     
      _Pi                                          = acos(-1.);
      _CellAreaToHectares                          = repast::strToDouble(props->getProperty("HumanParameters.CellAreaToHectares"));
